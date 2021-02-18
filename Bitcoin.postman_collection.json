@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "8aa0573d-62f5-4e30-a90d-52e800fa8869",
+		"name": "Bitcoin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\": \"123\",\r\n    \"Quantity\": 0.1\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/buy",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"buy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserId\": \"123\",\r\n    \"Quantity\": 0.5\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/sell",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"sell"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": ""
+		}
+	]
+}

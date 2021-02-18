@@ -1,0 +1,36 @@
+Module: ServerlessDotNetPatterns.BitcoinTable
+Description: Bitcoin Table
+Items:
+
+  - Import: BitcoinTopic
+    Module: ServerlessDotNetPatterns.BitcoinTopic::Topic
+    Type: AWS::SNS::Topic
+    Allow:
+      - sns:Subscribe
+
+  - Function: StoreBitcoinFunction
+    Memory: 256
+    Timeout: 30
+    Sources:
+      - Topic: BitcoinTopic
+
+  - Resource: Table
+    Type: AWS::DynamoDB::Table
+    Scope: StoreBitcoinFunction, public
+    Allow:
+      - dynamodb:PutItem
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: SK
+          AttributeType: S
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+        - AttributeName: SK
+          KeyType: RANGE
+      TimeToLiveSpecification:
+        AttributeName: Expire
+        Enabled: true
