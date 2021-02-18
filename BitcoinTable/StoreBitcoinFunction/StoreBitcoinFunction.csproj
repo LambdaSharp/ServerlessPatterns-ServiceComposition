@@ -4,7 +4,7 @@
     <Deterministic>true</Deterministic>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <RootNamespace>ServerlessDotNetPatterns.BitcoinTable.StoreBitcoinFunction</RootNamespace>
+    <RootNamespace>ServerlessPatterns.BitcoinTable.StoreBitcoinFunction</RootNamespace>
     <NoWarn>CS1998</NoWarn>
   </PropertyGroup>
   <ItemGroup>

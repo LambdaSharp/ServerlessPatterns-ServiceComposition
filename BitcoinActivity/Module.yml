@@ -1,8 +1,8 @@
-Module: ServerlessDotNetPatterns.BitcoinActivity
+Module: ServerlessPatterns.BitcoinActivity
 Items:
 
   - Import: BitcoinPriceTable
-    Module: ServerlessDotNetPatterns.BitcoinTable::Table
+    Module: ServerlessPatterns.BitcoinTable::Table
     Type: AWS::DynamoDB::Table
     Scope: RecordFunction
     Allow:

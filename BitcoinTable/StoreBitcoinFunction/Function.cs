@@ -7,7 +7,7 @@ using Amazon.DynamoDBv2.Model;
 using LambdaSharp;
 using LambdaSharp.SimpleNotificationService;
 
-namespace ServerlessDotNetPatterns.BitcoinTable.StoreBitcoinFunction {
+namespace ServerlessPatterns.BitcoinTable.StoreBitcoinFunction {
 
     public class BitcoinNotification {
 

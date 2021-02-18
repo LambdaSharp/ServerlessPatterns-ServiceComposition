@@ -1,9 +1,9 @@
-Module: ServerlessDotNetPatterns.BitcoinTable
+Module: ServerlessPatterns.BitcoinTable
 Description: Bitcoin Table
 Items:
 
   - Import: BitcoinTopic
-    Module: ServerlessDotNetPatterns.BitcoinTopic::Topic
+    Module: ServerlessPatterns.BitcoinTopic::Topic
     Type: AWS::SNS::Topic
     Allow:
       - sns:Subscribe

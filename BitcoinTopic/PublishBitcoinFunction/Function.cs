@@ -3,7 +3,7 @@ using Amazon.SimpleNotificationService;
 using LambdaSharp;
 using LambdaSharp.Schedule;
 
-namespace ServerlessDotNetPatterns.BitcoinTopic.PublishBitcoinFunction
+namespace ServerlessPatterns.BitcoinTopic.PublishBitcoinFunction
 {
 
     public sealed class Function : ALambdaScheduleFunction {

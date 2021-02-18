@@ -8,7 +8,7 @@ using Amazon.DynamoDBv2.Model;
 using LambdaSharp;
 using LambdaSharp.ApiGateway;
 
-namespace ServerlessDotNetPatterns.BitcoinActivity.RecordFunction {
+namespace ServerlessPatterns.BitcoinActivity.RecordFunction {
 
     public class ActivityRequest {
 
