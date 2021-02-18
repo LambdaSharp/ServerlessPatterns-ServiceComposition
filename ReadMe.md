@@ -15,3 +15,9 @@ The _BitcoinTable_ module creates a Lambda function that subscribes to the SNS t
 The _BitcoinActivity_ module creates a REST API for recording buy/sell activity. It imports the table from the _BitcoinTable_ stack to fetch the most recently recorded price.
 
 A Postman collection is provided to easily interact with the REST API.
+
+## Deploy
+
+```bash
+lash deploy BitcoinTopic BitcoinTable BitcoinActivity
+```

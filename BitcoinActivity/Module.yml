@@ -17,7 +17,7 @@ Items:
       - Api: POST:/sell
         Invoke: Sell
 
-  - Resource: ActivityTable
+  - Resource: Table
     Type: AWS::DynamoDB::Table
     Scope: RecordFunction, public
     Allow:

@@ -46,7 +46,7 @@ namespace ServerlessDotNetPatterns.BitcoinActivity.RecordFunction {
         public override async Task InitializeAsync(LambdaConfig config) {
 
             // read function settings
-            _activityTableName = config.ReadDynamoDBTableName("ActivityTable");
+            _activityTableName = config.ReadDynamoDBTableName("Table");
             _bitcoinPriceTableName = config.ReadDynamoDBTableName("BitcoinPriceTable");
 
             // initialize clients
