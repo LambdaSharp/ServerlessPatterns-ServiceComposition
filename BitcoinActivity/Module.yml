@@ -1,4 +1,8 @@
 Module: ServerlessPatterns.BitcoinActivity
+Version: 1.0
+Description: Sample API for Bitcoin transactions
+Using:
+  - Module: ServerlessPatterns.BitcoinTable:1.0@lambdasharp
 Items:
 
   - Import: BitcoinPriceTable

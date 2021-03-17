@@ -28,6 +28,7 @@ namespace ServerlessPatterns.BitcoinTable.StoreBitcoinFunction {
 
         //--- Fields ---
         private string _tableName;
+        private int _priceRetentionInMinutes;
         private IAmazonDynamoDB _dynamoClient;
 
         //--- Constructors ---
@@ -38,6 +39,7 @@ namespace ServerlessPatterns.BitcoinTable.StoreBitcoinFunction {
 
             // read function settings
             _tableName = config.ReadDynamoDBTableName("Table");
+            _priceRetentionInMinutes = config.ReadInt("PriceRetentionInMinutes");
 
             // initialize clients
             _dynamoClient = new AmazonDynamoDBClient();
@@ -50,7 +52,7 @@ namespace ServerlessPatterns.BitcoinTable.StoreBitcoinFunction {
                 ["PK"] = new AttributeValue("BITCOINPRICE"),
                 ["SK"] = new AttributeValue($"TIME#{DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString("000000000000")}"),
                 ["Expire"] = new AttributeValue {
-                    N = DateTimeOffset.UtcNow.AddMinutes(15).ToUnixTimeSeconds().ToString()
+                    N = DateTimeOffset.UtcNow.AddMinutes(_priceRetentionInMinutes).ToUnixTimeSeconds().ToString()
                 }
             };
             foreach(var (symbol,price) in message.BitcoinPriceIndex) {

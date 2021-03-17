@@ -1,6 +1,18 @@
 Module: ServerlessPatterns.BitcoinTable
-Description: Bitcoin Table
+Version: 1.0
+Description: Stores most recent Bitcoin prices in a DynamoDB table
+Using:
+  - Module: ServerlessPatterns.BitcoinTopic:1.0@lambdasharp
 Items:
+
+  - Parameter: PriceRetentionInMinutes
+    Scope: StoreBitcoinFunction
+    Description: Duration in minutes for how long Bitcoin prices are stored
+    Section: Bitcoin Activity Settings
+    Label: Retention period (minutes)
+    Type: Number
+    MinValue: 1
+    Default: 15
 
   - Import: BitcoinTopic
     Module: ServerlessPatterns.BitcoinTopic::Topic

@@ -1,5 +1,6 @@
 Module: ServerlessPatterns.BitcoinTopic
-Description: Bitcoin Topic
+Version: 1.0
+Description: Publishes Bitcoin price to an SNS topic every minute
 Items:
 
   - Function: PublishBitcoinFunction

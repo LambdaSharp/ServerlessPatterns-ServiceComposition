@@ -29,7 +29,6 @@ namespace ServerlessPatterns.BitcoinActivity.RecordFunction {
         public string Activity { get; set; }
         public double Quantity { get; set; }
         public double Price { get; set; }
-
     }
 
     public sealed class Function : ALambdaApiGatewayFunction {
