@@ -1,8 +1,5 @@
 Module: ServerlessPatterns.BitcoinTable
-Version: 1.0
 Description: Stores most recent Bitcoin prices in a DynamoDB table
-Using:
-  - Module: ServerlessPatterns.BitcoinTopic:1.0@lambdasharp
 Items:
 
   - Parameter: PriceRetentionInMinutes
